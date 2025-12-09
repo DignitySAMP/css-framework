@@ -1,0 +1,60 @@
+$spacing-numeric: (
+    0: 0,
+    1: 0.25rem,
+    2: 0.5rem,
+    3: 0.75rem,
+    4: 1rem,
+    5: 1.25rem,
+    6: 1.5rem,
+    8: 2rem,
+    10: 2.5rem,
+    12: 3rem
+);
+
+$spacing-named: (
+    'sm': 0.5rem,
+    'md': 1rem,
+    'lg': 1.5rem,
+    'xlg': 2rem,
+    'xxlg': 3rem
+);
+
+@mixin spacing-utilities($map, $suffix: '') {
+    @each $key, $value in $map {
+        .p-#{$key}#{$suffix} {
+            padding: $value;
+        }
+
+        .px-#{$key}#{$suffix} {
+            padding-left: $value;
+            padding-right: $value;
+        }
+
+        .py-#{$key}#{$suffix} {
+            padding-top: $value;
+            padding-bottom: $value;
+        }
+
+        .m-#{$key}#{$suffix} {
+            margin: $value;
+        }
+
+        .mx-#{$key}#{$suffix} {
+            margin-left: $value;
+            margin-right: $value;
+        }
+
+        .my-#{$key}#{$suffix} {
+            margin-top: $value;
+            margin-bottom: $value;
+        }
+    }
+}
+
+@include spacing-utilities($spacing-numeric);
+@include spacing-utilities($spacing-named);
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
