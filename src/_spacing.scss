@@ -2,18 +2,41 @@
 ***     Spacing Utilities
 **/
 
-$spacing-numeric: (
-    0: 0,
-    1: 0.25rem,
-    2: 0.5rem,
-    3: 0.75rem,
-    4: 1rem,
-    5: 1.25rem,
-    6: 1.5rem,
-    8: 2rem,
-    10: 2.5rem,
-    12: 3rem
-);
+
+$max-iterations: 50; // amount of iterations to jump through
+
+@for $i from 0 through (calc($max-iterations / 2)) {
+    $key: $i * 2;
+    $value: $i * 0.25rem;
+
+    .p-#{$key} {
+        padding: $value;
+    }
+
+    .px-#{$key} {
+        padding-left: $value;
+        padding-right: $value;
+    }
+
+    .py-#{$key} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+
+    .m-#{$key} {
+        margin: $value;
+    }
+
+    .mx-#{$key} {
+        margin-left: $value;
+        margin-right: $value;
+    }
+
+    .my-#{$key} {
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+}
 
 $spacing-named: (
     'sm': 0.5rem,
@@ -55,7 +78,6 @@ $spacing-named: (
     }
 }
 
-@include spacing-utilities($spacing-numeric);
 @include spacing-utilities($spacing-named);
 
 .mx-auto {
