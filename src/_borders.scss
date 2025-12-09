@@ -1,0 +1,113 @@
+/**
+***     Border Utilities
+**/
+
+
+$default-border-style: solid;
+$border-widths: (
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8
+);
+
+@each $width in $border-widths {
+    .border-#{$width} {
+        border-width: #{$width}px;
+        border-style: $default-border-style;
+    }
+}
+
+@each $width in $border-widths {
+    .border-x-#{$width} {
+        border-left-width: #{$width}px;
+        border-right-width: #{$width}px;
+        border-style: $default-border-style;
+    }
+
+    .border-y-#{$width} {
+        border-top-width: #{$width}px;
+        border-bottom-width: #{$width}px;
+        border-style: $default-border-style;
+    }
+}
+
+@each $width in $border-widths {
+    .border-t-#{$width} {
+        border-top-width: #{$width}px;
+        border-style: $default-border-style;
+    }
+
+    .border-b-#{$width} {
+        border-bottom-width: #{$width}px;
+        border-style: $default-border-style;
+    }
+
+    .border-l-#{$width} {
+        border-left-width: #{$width}px;
+        border-style: $default-border-style;
+    }
+
+    .border-r-#{$width} {
+        border-right-width: #{$width}px;
+        border-style: $default-border-style;
+    }
+}
+
+$border-styles: (
+    'solid',
+    'dashed',
+    'dotted',
+    'double',
+    'none'
+);
+
+@each $style in $border-styles {
+    .border-style-#{$style} {
+        border-style: $style;
+    }
+}
+
+$border-radius-sizes: (
+    sm: 0.125rem,
+    // 2px
+    md: 0.25rem,
+    // 4px
+    lg: 0.5rem,
+    // 8px
+    xl: 1rem // 16px
+);
+
+@each $size, $value in $border-radius-sizes {
+    .rounded-#{$size} {
+        border-radius: $value;
+    }
+}
+
+@each $size, $value in $border-radius-sizes {
+    .rounded-t-#{$size} {
+        border-top-left-radius: $value;
+        border-top-right-radius: $value;
+    }
+
+    .rounded-b-#{$size} {
+        border-bottom-left-radius: $value;
+        border-bottom-right-radius: $value;
+    }
+
+    .rounded-l-#{$size} {
+        border-top-left-radius: $value;
+        border-bottom-left-radius: $value;
+    }
+
+    .rounded-r-#{$size} {
+        border-top-right-radius: $value;
+        border-bottom-right-radius: $value;
+    }
+}
+
+// TODO: colouring module
