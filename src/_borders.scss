@@ -74,12 +74,9 @@ $border-styles: (
 
 $border-radius-sizes: (
     sm: 0.125rem,
-    // 2px
     md: 0.25rem,
-    // 4px
     lg: 0.5rem,
-    // 8px
-    xl: 1rem // 16px
+    xl: 1rem
 );
 
 @each $size, $value in $border-radius-sizes {
