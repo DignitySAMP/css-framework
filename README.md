@@ -1,5 +1,4 @@
 # css-framework
-A minimalistic, opinionated utility first css framework 
+A minimalistic, opinionated utility first css framework written using Sass.
 
-
-[Documentation is a work in progress => will be ported to the wiki]
+Documentation can be found [on the wiki](https://github.com/DignitySAMP/css-framework/wiki) but is a work in progress.
