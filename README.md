@@ -1,42 +1,48 @@
 # css-framework
 A minimalistic, opinionated utility first css framework 
-
 ## Spacing
 
-There are a handful of utilities for padding and margin. You can easily manipulate spacing horizontally, vertically or all around. There are also macro's for centering (-auto). 
+There are a handful of utilities for padding and margin. You can easily manipulate spacing horizontally, vertically, or all around. Macros such as `-auto` allow automatic centering behavior.
 
 ### Classes
 
-| Padding | Result |
-| - | - |
-|`p-{value}` | padding all around element (top, left, bottom, right) |
-|`px-{value}` | horizontal padding (left, right) |
-|`py-{value}` | vertical padding (top, bottom) |
-|`px-auto` | applies automatic horizontal padding for centering elements. |
+#### Padding
 
-| Margin  | |
-| - | - |
-|`m-{value}` | margin all around element (top, left, bottom, right) |
-|`mx-{value}` | horizontal margin (left, right) |
-|`my-{value}` | vertical margin (top, bottom) |
-|`mx-auto` | applies automatic horizontal padding for centering elements. |
+| Class | Result | CSS |
+| - | - | - |
+| `p-{value}` | padding on all sides | `padding: {value};` |
+| `px-{value}` | horizontal padding | `padding-left: {value}; padding-right: {value};` |
+| `py-{value}` | vertical padding | `padding-top: {value}; padding-bottom: {value};` |
+| `px-auto` | automatic horizontal spacing | `padding-left: auto; padding-right: auto;` |
+
+#### Margin
+
+| Class | Result | CSS |
+| - | - | - |
+| `m-{value}` | margin on all sides | `margin: {value};` |
+| `mx-{value}` | horizontal margin | `margin-left: {value}; margin-right: {value};` |
+| `my-{value}` | vertical margin | `margin-top: {value}; margin-bottom: {value};` |
+| `mx-auto` | horizontal centering | `margin-left: auto; margin-right: auto;` |
+
+---
 
 ### Values
 
-Each key maps to a specific `rem` value (see table). You may use macros (sm, md, lg, ...) remniscent of Tailwind CSS, or numeric values.
+Each key maps to a specific `rem` value (and corresponding pixel value).  
+You may use numeric keys or macros (`sm`, `md`, `lg`, etc.), similar to Tailwind CSS.
 
-| Numeric | Macro | Value (px) | Value (rem) |
-|-----|--------|------|---------|
-| 0   | —      | 0px  | 0       |
-| 1   | —      | 4px  | 0.25rem |
-| 2   | sm     | 8px  | 0.5rem  |
-| 3   | —      | 12px | 0.75rem |
-| 4   | md     | 16px | 1rem    |
-| 5   | —      | 20px | 1.25rem |
-| 6   | lg     | 24px | 1.5rem  |
-| 8   | xlg    | 32px | 2rem    |
-| 10  | —      | 40px | 2.5rem  |
-| 12  | xxlg   | 48px | 3rem    |
+| Numeric | Macro | Value (px) | Value (rem) | CSS |
+|-----|--------|------------|-------------|-----|
+| 0   | —      | 0px        | 0           | `padding: 0;` / `margin: 0;` |
+| 1   | —      | 4px        | 0.25rem     | `padding: 0.25rem;` / `margin: 0.25rem;` |
+| 2   | sm     | 8px        | 0.5rem      | `padding: 0.5rem;` / `margin: 0.5rem;` |
+| 3   | —      | 12px       | 0.75rem     | `padding: 0.75rem;` / `margin: 0.75rem;` |
+| 4   | md     | 16px       | 1rem        | `padding: 1rem;` / `margin: 1rem;` |
+| 5   | —      | 20px       | 1.25rem     | `padding: 1.25rem;` / `margin: 1.25rem;` |
+| 6   | lg     | 24px       | 1.5rem      | `padding: 1.5rem;` / `margin: 1.5rem;` |
+| 8   | xlg    | 32px       | 2rem        | `padding: 2rem;` / `margin: 2rem;` |
+| 10  | —      | 40px       | 2.5rem      | `padding: 2.5rem;` / `margin: 2.5rem;` |
+| 12  | xxlg   | 48px       | 3rem        | `padding: 3rem;` / `margin: 3rem;` |
 
 
 ### Examples
