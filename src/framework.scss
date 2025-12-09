@@ -1,8 +1,14 @@
+@use './spacing';
+
 /**
-    Hello World
+***     Global Configuration
 **/
 
-@import 'spacing';
+
+
+/**
+***     Reset CSS
+**/
 
 * {
     box-sizing: border-box;
