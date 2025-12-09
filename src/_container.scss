@@ -1,46 +1,4 @@
 /**
-***     Width Utilities
-**/
-
-$width-sizes: (
-    'xxs': 0.5rem,
-    'xs': 1rem,
-    'sm': 1.5rem,
-    'md': 2rem,
-    'lg': 2.5rem,
-    'xlg': 3rem,
-    'xxlg': 3.5rem,
-    'xxxlg': 4rem,
-);
-
-
-@mixin width-utilities($map) {
-    @each $key, $value in $map {
-        .w-#{$key} {
-            width: $value;
-        }
-    }
-}
-
-@include width-utilities($width-sizes);
-
-.w-full {
-    width: 100%;
-}
-
-.w-fit {
-    width: fit-content;
-}
-
-.w-max {
-    width: max-content;
-}
-
-.w-screen {
-    width: 100vw;
-}
-
-/**
 *** Container Utilities (predefined width)
 **/
 
