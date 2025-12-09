@@ -3,16 +3,19 @@
 **/
 
 $width-sizes: (
-    'xxs': 0.5rem,
-    'xs': 1rem,
-    'sm': 1.5rem,
-    'md': 2rem,
-    'lg': 2.5rem,
-    'xlg': 3rem,
-    'xxlg': 3.5rem,
-    'xxxlg': 4rem,
+    '2xs': 15rem,
+    'xs': 30rem,
+    'sm': 35rem,
+    'md': 40rem,
+    'lg': 45rem,
+    'xlg': 50rem,
+    '2xlg': 55rem,
+    '3xlg': 60rem,
+    '4xlg': 65rem,
+    '5xlg': 70rem,
+    '6xlg': 75rem,
+    '7xlg': 80rem
 );
-
 
 @mixin width-utilities($map) {
     @each $key, $value in $map {
