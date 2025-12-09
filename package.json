@@ -2,9 +2,12 @@
   "name": "css-framework",
   "version": "1.0.0",
   "description": "A minimalistic, opinionated utility first css framework",
-  "main": "index.js",
+  "main": "dist/framework.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "sass src/framework.scss dist/framework.css",
+    "watch": "sass --watch src:dist",
+    "build:min": "sass --style=compressed src/framework.scss dist/framework.min.css",
+    "dev": "npm run watch"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/DignitySAMP/css-framework/issues"
   },
-  "homepage": "https://github.com/DignitySAMP/css-framework#readme"
+  "homepage": "https://github.com/DignitySAMP/css-framework#readme",
+  "devDependencies": {
+    "sass": "^1.95.0"
+  }
 }
