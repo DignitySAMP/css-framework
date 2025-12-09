@@ -3,11 +3,13 @@
 **/
 
 $container-sizes: (
+    'xs': 480px,
     'sm': 640px,
     'md': 768px,
     'lg': 1024px,
     'xlg': 1280px,
-    'xxlg': 1536px
+    '2xlg': 1536px,
+    '3xlg': 1600px
 );
 
 @each $name, $width in $container-sizes {
