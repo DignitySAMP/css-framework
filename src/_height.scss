@@ -16,7 +16,7 @@ $height-sizes: (
 
 @mixin height-utilities($map) {
     @each $key, $value in $map {
-        .w-#{$key} {
+        .h-#{$key} {
             height: $value;
         }
     }
