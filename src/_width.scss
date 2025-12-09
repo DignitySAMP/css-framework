@@ -19,6 +19,14 @@ $width-sizes: (
         .w-#{$key} {
             width: $value;
         }
+
+        .min-w-#{$key} {
+            min-height: $value;
+        }
+
+        .max-w-#{$key} {
+            max-height: $value;
+        }
     }
 }
 
