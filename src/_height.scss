@@ -19,6 +19,14 @@ $height-sizes: (
         .h-#{$key} {
             height: $value;
         }
+
+        .min-h-#{$key} {
+            min-height: $value;
+        }
+
+        .max-h-#{$key} {
+            max-height: $value;
+        }
     }
 }
 
