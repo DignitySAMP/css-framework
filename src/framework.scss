@@ -8,16 +8,6 @@
 ***     Global Configuration
 **/
 
-
-// TODO: auto generate *-numeric and $-named rem utilities (from 0rem all the way to 32rem)
-// TODO: improve naming conventions of xs, sm, ... and tie them to logical values (maybe add a scale parameter to jump inbetween 10's?
-// TODO: centralize this into _variables.scss => also apply this to _spacing.scss and _container.scss!
-
-
-/**
-***     Reset CSS
-**/
-
 * {
     box-sizing: border-box;
 }
