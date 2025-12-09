@@ -2,12 +2,19 @@
 ***     Spacing Utilities
 **/
 
+/*
+** Generate key-values for p, px, py and m, mx, my.
+** Runs $max-iterations (jumps per 2, 0, 2, 4, ...) and increments 
+** the value by 0.25rem per iter
+**
+** Default ($max-iterations): 50 (results in a max rem of 6.25 which is 100px)
+*/
 
 $max-iterations: 50; // amount of iterations to jump through
 
 @for $i from 0 through (calc($max-iterations / 2)) {
-    $key: $i * 2;
-    $value: $i * 0.25rem;
+    $key: $i * 2; // jump per 2
+    $value: $i * 0.25rem; // jump per 0.25
 
     .p-#{$key} {
         padding: $value;
@@ -38,47 +45,58 @@ $max-iterations: 50; // amount of iterations to jump through
     }
 }
 
+
+/*
+** Generate named-values for p, px, py and m, mx, my.
+**
+** Uses hard coded values to determine the size (from 4px up to 40px)
+**
+*/
+
 $spacing-named: (
+    'xs': 0.25rem,
     'sm': 0.5rem,
     'md': 1rem,
     'lg': 1.5rem,
     'xlg': 2rem,
-    'xxlg': 3rem
+    'xxlg': 2.5rem
 );
 
-@mixin spacing-utilities($map, $suffix: '') {
-    @each $key, $value in $map {
-        .p-#{$key}#{$suffix} {
-            padding: $value;
-        }
 
-        .px-#{$key}#{$suffix} {
-            padding-left: $value;
-            padding-right: $value;
-        }
+@each $key, $value in $spacing-named {
+    .p-#{$key} {
+        padding: $value;
+    }
 
-        .py-#{$key}#{$suffix} {
-            padding-top: $value;
-            padding-bottom: $value;
-        }
+    .px-#{$key} {
+        padding-left: $value;
+        padding-right: $value;
+    }
 
-        .m-#{$key}#{$suffix} {
-            margin: $value;
-        }
+    .py-#{$key} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
 
-        .mx-#{$key}#{$suffix} {
-            margin-left: $value;
-            margin-right: $value;
-        }
+    .m-#{$key} {
+        margin: $value;
+    }
 
-        .my-#{$key}#{$suffix} {
-            margin-top: $value;
-            margin-bottom: $value;
-        }
+    .mx-#{$key} {
+        margin-left: $value;
+        margin-right: $value;
+    }
+
+    .my-#{$key} {
+        margin-top: $value;
+        margin-bottom: $value;
     }
 }
 
-@include spacing-utilities($spacing-named);
+
+/*
+** Static macros that aren't automated
+*/
 
 .mx-auto {
     margin-left: auto;
