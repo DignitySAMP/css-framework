@@ -1,0 +1,20 @@
+{
+  "name": "css-framework",
+  "version": "1.0.0",
+  "description": "A minimalistic, opinionated utility first css framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DignitySAMP/css-framework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DignitySAMP/css-framework/issues"
+  },
+  "homepage": "https://github.com/DignitySAMP/css-framework#readme"
+}
