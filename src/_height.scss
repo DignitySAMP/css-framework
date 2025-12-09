@@ -1,0 +1,45 @@
+/**
+***     height Utilities
+**/
+
+$height-sizes: (
+    'xxs': 0.5rem,
+    'xs': 1rem,
+    'sm': 1.5rem,
+    'md': 2rem,
+    'lg': 2.5rem,
+    'xlg': 3rem,
+    'xxlg': 3.5rem,
+    'xxxlg': 4rem,
+);
+
+
+@mixin height-utilities($map) {
+    @each $key, $value in $map {
+        .w-#{$key} {
+            height: $value;
+        }
+    }
+}
+
+@include height-utilities($height-sizes);
+
+.h-full {
+    height: 100%;
+}
+
+.h-fit {
+    height: fit-content;
+}
+
+.h-max {
+    height: max-content;
+}
+
+.h-screen {
+    height: 100vw;
+}
+
+.h-auto {
+    height: auto;
+}
