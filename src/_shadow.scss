@@ -1,0 +1,54 @@
+/**
+***     Shadow Utilities
+**/
+
+// TODO: add color support (shadow-red, shadow-green, ...)
+$shadow-color: black;
+
+$shadow-sizes: (
+    xs: 0 1px 2px 0,
+    sm: 0 1px 3px 0,
+    md: 0 4px 6px -1px,
+    lg: 0 10px 15px -3px,
+    xlg: 0 20px 25px -5px,
+    2xlg: 0 25px 50px -12px,
+    3xlg: 0 35px 60px -15px
+);
+
+@each $size, $value in $shadow-sizes {
+    .shadow-#{$size} {
+        box-shadow: $value $shadow-color;
+    }
+}
+
+$shadow-x-values: (
+    xs: 0 0 2px 0,
+    sm: 1px 0 3px 0,
+    md: 4px 0 6px -1px,
+    lg: 10px 0 15px -3px,
+    xlg: 20px 0 25px -5px,
+    2xlg: 25px 0 50px -12px,
+    3xlg: 35px 0 60px -15px
+);
+
+@each $size, $value in $shadow-x-values {
+    .shadow-x-#{$size} {
+        box-shadow: $value $shadow-color;
+    }
+}
+
+$shadow-y-values: (
+    xs: 0 1px 0 0,
+    sm: 0 1px 0 0,
+    md: 0 4px 6px -1px,
+    lg: 0 10px 15px -3px,
+    xlg: 0 20px 25px -5px,
+    2xlg: 0 25px 50px -12px,
+    3xlg: 0 35px 60px -15px
+);
+
+@each $size, $value in $shadow-y-values {
+    .shadow-y-#{$size} {
+        box-shadow: $value $shadow-color;
+    }
+}
